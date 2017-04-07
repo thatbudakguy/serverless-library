@@ -42,7 +42,7 @@ app.get('/courses', function(req, res) {
         res.on('end', function() {
             parser.parseString(xml, function(err, json) {
                 output.writeHead(200, {'Content-Type': 'application/json'});
-                output.end(json);
+                output.end(JSON.stringify(json));
             });
         });
     });
