@@ -7,7 +7,7 @@ const https = require('https');
 app.get('/courses', function(req, res) {
     var output = res;
     var xml = '';
-    query = querystring.stringify({
+     query = querystring.stringify({
         'limit': req.webtaskContext.query.limit || 100,
         'offset': req.webtaskContext.query.offset || 0,
         'apikey': req.webtaskContext.data.alma_key,
